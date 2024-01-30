@@ -7,16 +7,17 @@ public class ValidacoesListaTests
     private ValidacoesLista _validacoes = new ValidacoesLista();
 
     [Fact]
+    //um fato ou uma verdade deve ser sempre verdadeira
     public void DeveRemoverNumerosNegativosDeUmaLista()
     {
-        // Arrange
+        // Arrange - MONTAR O CENARIO
         var lista = new List<int> { 5, -1, -8, 9 };
         var resultadoEsperado = new List<int> { 5, 9 };
 
-        // Act
+        // Act - EXECUTA O CENARIO
         var resultado = _validacoes.RemoverNumerosNegativos(lista);
 
-        // Assert
+        // Assert - VALIDAÇÃO DO CENARIO
         Assert.Equal(resultadoEsperado, resultado);
     }
 
@@ -37,7 +38,6 @@ public class ValidacoesListaTests
     [Fact]
     public void NaoDeveConterONumero10NaLista()
     {
-
         // Arrange
         var lista = new List<int> { 5, -1, -8, 9 };
         var numeroParaProcurar = 10;

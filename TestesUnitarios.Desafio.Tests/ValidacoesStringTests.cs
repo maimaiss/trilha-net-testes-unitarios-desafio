@@ -7,16 +7,17 @@ public class ValidacoesStringTests
     private ValidacoesString _validacoes = new ValidacoesString();
 
     [Fact]
+    //um fato ou uma verdade deve ser sempre verdadeira
     public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
     {
-        // Arrange
+        // Arrange - MONTAR O CENARIO
         var texto = "TikTok";
         var resultadoEsperado = 6;
 
-        // Act
+        // Act - EXECUTA O CENARIO
         var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
 
-        // Assert
+        // Assert - VALIDAÇÃO DO CENARIO
         Assert.Equal(resultadoEsperado, resultado);
     }
 
